@@ -1,0 +1,42 @@
+{
+  "name": "pwd",
+  "version": "1.0.0",
+  "description": "just another pwd",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack-dev-server --open --mode development",
+    "build": "webpack"
+  },
+  "keywords": [],
+  "author": "Dimitris Argyriou",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.1.2",
+    "@babel/preset-env": "^7.1.0",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.4",
+    "file-loader": "^2.0.0",
+    "html-loader": "^0.5.5",
+    "html-webpack-plugin": "^3.2.0",
+    "prop-types": "^15.6.2",
+    "react": "^16.5.2",
+    "react-dom": "^16.5.2",
+    "webpack": "^4.20.2",
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.9"
+  },
+  "dependencies": {
+    "css-loader": "^1.0.0",
+    "dnd": "^0.1.0",
+    "mathjs": "^5.2.1",
+    "react-bootstrap": "^0.32.4",
+    "react-dnd": "^5.0.0",
+    "react-dnd-html5-backend": "^5.0.1",
+    "react-mutation-observer": "^1.1.0",
+    "react-redux": "^5.0.7",
+    "react-websocket": "^2.0.0",
+    "redux": "^4.0.1",
+    "style-loader": "^0.23.1",
+    "uid": "0.0.2"
+  }
+}

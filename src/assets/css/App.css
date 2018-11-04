@@ -1,0 +1,776 @@
+body{
+  background-image: url(../Images/Main_Images/bg2.jpg);
+  background-size: cover;
+  font-family: 'Orbitron', sans-serif;
+}
+#memoryBtn{
+  background-image: url(../Images/Memory_Game_Images/memory.png); /* 16px x 16px */
+}
+#aboutBtn{
+  background-image: url(../Images/About_Images/about.png); 
+}
+#chatBtn {
+  background-image: url(../Images/Chat_Images/chat.png); /* 16px x 16px */
+}
+#calcBtn{
+  background-image: url(../Images/Calculator_Images/calculator.png);
+}
+#blacklist{
+  background-image: url(../Images/Chat_Images/mute.png);
+}
+#pause {
+  background-image: url(../Images/Memory_Game_Images/pause.png);
+}
+#resume {
+  background-image: url(../Images/Memory_Game_Images/resume.png);
+}
+
+#pause:focus, #resume:focus{
+  outline:none;
+}
+#pause:hover, #pause:active, #pause:visited, #resume:active, #resume:visited, #resume:hover {
+  border-color: brown;
+}
+#pause, #resume {
+  background-size: 43px;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  border-radius: 100%;
+  cursor: pointer;
+  height: 45px;
+  padding-right: 36px;
+  vertical-align: middle;
+  position: absolute;
+  left: 137px;
+  top: -5px;
+}
+#logo{
+  outline: 1px solid darksalmon;
+  margin-top: 2px;
+  margin-left: -11px;
+  background-color: white;
+  width: 342px;
+}
+#logo img {
+  width: 346px;
+}
+#chatBtn,#calcBtn, #aboutBtn{
+  background-size: 43px;
+  background-color: transparent; /* make the button transparent */
+  background-repeat: no-repeat;  /* make the background image appear only once */
+  background-position: 0px 0px;  /* equivalent to 'top left' */
+  border: none;           /* assuming we don't want any borders */
+  cursor: pointer;        /* make the cursor like hovering over an <a> element */
+  height: 45px;    
+  margin-top: 5px;         /* make this the size of your image */
+  margin-left: 8px;     /* make text start to the right of the image */
+  padding-right: 40px;
+  opacity:1;
+  vertical-align: middle; /* align the text vertically centered */
+}
+#blacklist {
+  background-size: 23px;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: 0px 0px;
+  border: none;
+  cursor: pointer;
+  height: 25px;
+  padding-right: 19px;
+  vertical-align: middle;
+  position: relative;
+  left: 242px;
+  top: -15px;
+}
+#muteUserInput{
+  font-family: 'Orbitron', sans-serif;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  font-size: 14px;
+  resize: none;
+  height: 35px;
+  width: 70%;
+  position: relative;
+  bottom: 1px;
+  padding-left: 10px;
+  left: 4px;
+}
+#unMuteUserInput {
+  font-family: 'Orbitron', sans-serif;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  font-size: 14px;
+  resize: none;
+  height: 35px;
+  width: 70%;
+  position: relative;
+  bottom: 45px;
+  padding-left: 10px;
+  left: 4px;
+}
+#mutedUsersList {
+  outline: 1px solid burlywood;
+  height: 318px;
+  margin-top: -37px;
+  background-color: rgb(16, 44, 95);
+  overflow-y: scroll;
+  color: white;
+}
+#memoryBtn{
+  background-size: 51px;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: 0px 0px;
+  border: none;
+  cursor: pointer;
+  height: 48px;
+  margin-top: 5px;
+  margin-left: 4px;
+  padding-right: 42px;
+  opacity: 1;
+  vertical-align: middle;
+}
+#aboutBtn{
+  position: absolute;
+  bottom: 10px;
+  left: 0px;
+}
+#memoryBtn:hover,#chatBtn:hover,#calcBtn:hover{
+  animation: bounce 1s;
+}
+#memoryBtn:focus, #chatBtn:focus,#calcBtn:focus{
+  animation: effect_dylan 0.8s ease-out;
+}
+.navBar{
+  background-color:  rgba(15, 36, 75, 0.5);
+  width: 60px;
+  height: 95vh;
+  left: -7px;
+  position: relative;
+}
+.login{
+  background-color: rgba(82, 10, 141, 0.5);
+  width: 343px;
+  height: 86px;
+  margin-top: 27px;
+  padding-left: 2px;
+  position: absolute;
+  top: 10px;
+  left: 0px;
+  z-index: 99 !important;
+}
+@keyframes bounce {
+	0%, 20%, 60%, 100% {
+		-webkit-transform: translateY(0);
+		transform: translateY(0);
+	}
+
+	40% {
+		-webkit-transform: translateY(-3px);
+		transform: translateY(-3px);
+	}
+
+	80% {
+		-webkit-transform: translateY(-3px);
+		transform: translateY(-3px);
+	}
+}
+
+@keyframes effect_dylan {
+  50% {
+    transform: scale(1.5, 1.5);
+    opacity: 0;
+  }
+  99% {
+    transform: scale(0.001, 0.001);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(0.001, 0.001);
+    opacity: 1;
+  }
+}
+.messanger, .line {
+  background-color:  rgba(15, 36, 75, 0.5);
+}
+.masterContainer {
+  font-family: 'Orbitron', sans-serif;
+  width:350px;
+  height: 500px;
+  border: 2px solid rgb(22, 10, 88);
+  background-color:  rgba(15, 36, 75, 0.5);
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  resize: none;
+  padding-left: 13px;
+  padding-top: 1px;
+  font-size: 13px;
+  position:absolute;
+  top: 5%;
+  left: 10%;
+}
+.flexContainer {
+  display: flex;
+  flex-wrap: wrap;
+  width: 354px;
+  padding-left: 37px;;
+  padding-top: 20px;
+
+}
+
+.flexContainer >a > img {
+  width: 82px;
+  height: 82px;
+  outline: 1px solid white;
+  padding: 1px;
+}
+.flexContainer > a:focus {
+  border: 1px solid rgb(146, 131, 131)
+}
+
+#closeBtn {
+  font-family: 'Orbitron', sans-serif;
+  float:right;
+  padding: 1px;
+  margin-bottom: 2px;
+  background-image: url(../Images/Main_Images/closebtn.png);
+  width:23px;
+  height:23px;
+  background-size: 100%; /* To fill the dimensions of container (button), or */
+  background-size: 20px;
+  background-color: transparent; /* make the button transparent */
+  background-repeat: no-repeat; 
+  border:none;
+  cursor: pointer;
+  position: relative;
+  top: 2px;
+}
+
+#settingsBtn{
+  font-family: 'Orbitron', sans-serif;
+  float:right;
+  padding: 1px;
+  margin-bottom: 2px;
+  background-image: url(../Images/Main_Images/cog.png);
+  width:23px;
+  height:23px;
+  background-size: 100%; /* To fill the dimensions of container (button), or */
+  background-size: 20px;
+  background-color: transparent; /* make the button transparent */
+  background-repeat: no-repeat; 
+  border:none;
+  cursor: pointer;
+  position: relative;
+  top: 2px;
+}
+#connectBtn{
+  font-family: 'Orbitron', sans-serif;
+  margin-left: 254px;
+  height: 61px;
+  margin-top: 16px;
+  background-color: #555555;
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  position: relative;
+  bottom: 90px;
+}
+
+.messageText{
+  color:white;
+  overflow-wrap: break-word;
+  font-weight: normal;
+  font-style: italic
+}
+.username, .message {
+  width: 325px;
+}
+#calcImg,#chatImg,#memorygameImg,#aboutImg {
+  height: 30px;
+}
+#chatImg {
+  padding-top: 2px;
+  padding-left: 2px;
+}
+#calcImg {
+  position: relative;
+  left: -9px;
+  top: 1px;
+}
+#aboutImg {
+  margin-left: -9px;
+  margin-top: 2px;
+}
+
+#connectBtn:hover{
+  color: rgb(92, 68, 68);
+}
+.atag:focus, .image:focus{
+  color:purple;
+}
+a:active {
+  color:purple;
+}
+a:visited, {
+  color: purple;
+}
+#connectBtn:hover{
+  background-color: rgb(247, 241, 241);
+}
+#gameContent {
+  padding-bottom: 21px;
+  height: 409px;
+}
+.newMessage{
+  font-family: 'Orbitron', sans-serif;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  font-size: 14px;
+  resize: none;
+  height: 35px;
+  width: 75%;
+  position: relative;
+  bottom: -3px;
+  padding-left: 10px;
+}
+
+#channel,#username {
+  font-family: 'Orbitron', sans-serif;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  font-size: 16px;
+  resize: none;
+  height: 32px;
+  margin-bottom: 2px;
+  padding-left: 7px;
+  margin-left: 10px;
+  width: 70%;
+
+}
+#username{
+  margin-top: 5px;}
+#channel{
+  margin-bottom:10px;
+  margin-top: 5px;
+}
+.line {
+width: 100%px;
+height: 36px;
+border-bottom: 1px solid rgb(139, 137, 137);
+margin-left: -13px;
+
+}
+#submitGameSel{
+  font-family: 'Orbitron', sans-serif;
+  background-color: #555555;
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  cursor: pointer;
+  position: relative;
+  bottom: 48px;
+  left: 226px;
+  width: 100px;
+  height: 48px;
+}
+
+#infoContainer {
+  left: 13px;
+  top: 442px;
+  position: absolute;
+  color: white;
+}
+label{
+  color:rgb(255, 167, 167);
+}
+#selectGame {
+  position: relative;
+  top: 2px;
+  background-color:  rgba(15, 36, 75, 0.5);
+  left: -11px;
+  width: 343px;
+  padding-top: 20px;
+  height: 77px;
+  color: white;
+}
+
+#tryAgain {
+  margin-left: 263px;
+  font-family: 'Orbitron', sans-serif;
+  background-color: #555555;
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  cursor: pointer;
+  position: absolute;
+  bottom: -7px;
+  left: -7px;
+}
+#sendBtn{
+  font-family: 'Orbitron', sans-serif;
+  margin-left: 259px;
+  height: 33px;
+  margin-top: 15px;
+  background-color: #555555;
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  position: relative;
+  bottom: 46px;
+}
+#gameOverImg, #pausedImg, #winImg{
+  position: absolute;
+  left: 9px;
+  margin-top: 125px;
+  width: 334px;
+  opacity: 1;
+}
+#pausedDiv, #winDiv {
+  width: 342px;
+  height: 366px;
+  background-color: black;
+  position: absolute;
+  bottom: 69px;
+  left: -11px;
+  opacity: 0.9;
+}
+
+#muteBtn {
+  font-family: 'Orbitron', sans-serif;
+  margin-left: 259px;
+  height: 33px;
+  margin-top: 15px;
+  background-color: #555555;
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  position: relative;
+  bottom: 50px;
+  width: 83px;
+  right: 8px;
+
+}
+#unmute {
+  font-family: 'Orbitron', sans-serif;
+  height: 33px;
+  background-color: #555555;
+  border: none;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  position: relative;
+  bottom: 44px;
+  left: 9px;
+  width: 83px;
+}
+#game {
+  width: 359px;
+  margin-left: -22px;
+}
+#messageList{
+  float: left;
+  width: 330px;
+  overflow-y: auto;
+  height: 406px;
+  
+}
+
+.calcContainer{
+  font-family: 'Orbitron', sans-serif;
+  width: 320px;
+  height: 489px;
+  background-color: rgba(15, 36, 75, 0.5);
+  border-radius: 4px;
+  font-size: 16px;
+  resize: none;
+  padding-left: 12px;
+  padding-right: 14px;
+  padding-top: 2px;
+  font-size: 13px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+a:active {
+  background-color: rgb(82, 10, 141, 1);
+}
+
+.calcNumber,.operator {
+  height: 61px;
+  border: none;
+  outline: 1px solid gainsboro;
+  width: 80px;
+  font-size: 4em;
+  font-family: 'Orbitron', sans-serif;
+  background-color:rgba(15, 36, 75, 0.5);
+  color: floralwhite;
+  top: -8px;
+  position: relative;
+
+}
+.calcNumber:hover,.operator:hover {
+  background-color: rgba(15, 36, 75, 0.75);
+}
+.resultScreen{
+  font-family: 'Orbitron', sans-serif;
+  height: 84px;
+  background-color: rgba(15, 36, 75, 0.9);
+  outline: 1px solid antiquewhite;
+  margin-top: 10px;
+
+}
+.allButtons {
+  font-family: 'Orbitron', sans-serif;
+  margin-top: 10px;
+}
+.calcHeader {
+  margin-right: -12px;
+}
+
+#inputAndResult {
+  font-family: 'Orbitron', sans-serif;
+  border: none;
+  background-color: rgba(15, 36, 75, 0.9);
+  resize: none;
+  outline: none;
+  width: 97%;
+  height: 60%;
+  text-align: right;
+  font-size: 21px;
+  position: relative;
+  top: -4px;
+  color: white;
+  overflow: hidden;
+  
+}
+#calculations {
+  font-family: 'Orbitron', sans-serif;
+  border: none;
+  background-color: rgba(15, 36, 75, 0.9);
+  resize: none;
+  outline: none;
+  width: 97%;
+  height: 32%;
+  text-align: right;
+  font-size: 21px;
+  position: relative;
+  top: 0px;
+  color: white;
+  overflow: hidden;
+}
+#zero {
+  width: 160px;
+}
+#backspace{
+  background-image: url(../Images/Calculator_Images/backspace.png);
+  width: 80px;
+  height: 60px;
+  background-size: 72px;
+  background-repeat: no-repeat;
+  position: relative;
+  top: 10px;
+  background-position-y: center;
+}
+#mod{
+  font-size: 28px;
+}
+#divide, #ac{
+  top: 2px;
+
+}
+.switch {
+  position: relative;
+  display: inline-block;
+  height: 22px;
+  width: 49px;
+}
+
+.switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 10px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+  height: 16px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 10px;
+  width: 15px;
+  left: 4px;
+  bottom: 3px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 8px;
+}
+
+.slider.round:before {
+  border-radius: 42%;
+}
+
+.conversionHolders{
+  font-family: 'Orbitron', sans-serif;
+  height: 73px;
+  background-color: rgba(15, 36, 75, 0.9);
+  outline: 1px solid antiquewhite;
+  margin-top: 28px;
+  color: antiquewhite;
+  font-size: 15px;
+  padding-left: 5px;
+  border: none;
+  width: 204px;
+}
+.conversionBtns, #clearbutton{
+  font-family: 'Orbitron', sans-serif;
+  height: 33px;
+  background-color: #555555;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  position: relative;
+  border: none;
+  outline: 1px solid antiquewhite;
+}
+
+#clearbutton {
+  position: relative;
+  bottom: 108px;
+  left: 106px;
+  width: 100px;
+}
+
+#b1{
+  top: -33px;
+  left: 7px;
+  width: 111px;
+}
+#b2{
+  bottom: 45px;
+  left: 215px;  
+  width: 111px;
+}
+#b3{
+  bottom: 79px;
+  left: 6px;
+  width: 111px;
+}
+#b4{
+  left: 215px;
+  bottom: 91px;
+  width: 111px;
+
+}
+#b5{
+  bottom: 125px;
+  left: 6px;
+  width: 111px;
+}
+#b6{
+  bottom: 137px;
+  left: 215px;
+  width: 111px;
+}
+#conversionHolder1 {
+  position: relative;
+  bottom: 12px;
+}
+
+#conversionHolder2 {
+  position: relative;
+  bottom: 58px;
+}
+#conversionHolder3 {
+  position: relative;
+  bottom: 104px;
+}
+#calcToggleTitle {
+  padding-left: 21px;
+  padding-right: 6px;
+  color: antiquewhite;
+  position: relative;
+  top: 10px;
+}
+#converterToggleTitle{
+  padding-right: 10px;
+  padding-left: 5px;
+  color: antiquewhite;
+  position: relative;
+  top: 10px;
+  left: 10px;
+}
+#ac{
+  font-size: 32px;
+  top: -6px;
+}
+#about-text{
+  font-family: 'Orbitron', sans-serif;
+  margin: 55px 0px 0px -12px;
+  width: 338px;
+  height: 255px;
+  border: none;
+  font-size: 16px;
+  font-kerning: none;
+  text-align: center;
+  background-color: transparent;
+  color: rgb(241, 229, 229)
+}
